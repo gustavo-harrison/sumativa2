@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<!----------------------------- BANNNER INTERMEDIO -------------------------------------------->
+
+<section class="hero-page">
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+        <h1 class="hero-tittle-page">CONTACTO</h1>
+    </div>
+</section>
+
+<!---------------- BANNER GOOGLE MAPS  ------------->
+
+<section class="fullwidth-maps">
+    <iframe
+    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=paseo%20las%20palmas%20providencia+(store%20games)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+    allowfullscreen="" 
+    loading="lazy">
+
+    </iframe>
+
+</section>h
+
+<!---------------- FORMULARIO  ------------->
+
+    <section class="container contact-sesion">
+        <div class="row">
+            <div class="col-md-5 mb-4">
+                <h2>Ponte en contacto con nosotros</h2>
+                <p>Store Games se distingue por ofrecer un servicio de alta calidad, 
+                    brindando una experiencia excepcional a sus clientes.</p>
+
+                <p class="text-uppercase text-muted mb1"> Teléfono</p>
+                <p class="fw-bold"> +56932497667</p>
+                <p class="text-uppercase text-muted mb1"> Correo electrónico</p>
+                <p class="fw-bold"> Contacto@storegames.cl</p>
+                <p class="text-uppercase text-muted mb1"> Ubicación</p>
+                <p class="fw-bold"> Paseo las palmas, local 94, Providencia</p>
+                <p class="text-uppercase text-muted mb1"> Horario de atención</p>
+                <p class="fw-bold"> Lunes a Sábado de 10:00 a 19:30 hrs (horario continuo)</p>
+
+                <div class="mt-4 d-flex gap-3">
+                    <a href="#"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#"><i class="bi bi-youtube fs-4"></i></a>
+                    <a href="#"><i class="bi bi-twitter fs-4"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="contact-form-box">
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col"> <input type="text" class="form-control" id="nombre" placeholder="Tu nombre"></div>
+                            <div class="col"> <input type="email" class="form-control" id="correo" placeholder="Tu correo"></div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col"> <input type="text" class="form-control" id="telefono" placeholder="Telefono"></div>
+                            <div class="col"> <input type="number" class="form-control" id="edad" placeholder="Edad"></div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="mensaje" rows="4" placeholder="Mensaje"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-join" onclick="validarformulariocontacto()"> Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+{% endblock %}

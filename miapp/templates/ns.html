@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+
+<!-------------------------------- TABLA ------------------------------------------->  
+
+<div class="container mt-6">
+    <div class="mt-3 mb-3 d-flex"></div>
+    <table class="table table-striped table-hover table-bordered">
+    <!-- Encabezado de la tabla -->
+        <thead class="table-dark">
+            <tr>
+                <th></th>
+                <th>Serie</th>
+                <th>Nombre Título</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th></th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="width: auto; text-align: center;">
+                    <img src="{% static 'img/ns_luigimansion2.jpg' %}" alt="luigimansion2" class="img-fluid img-ps4">
+                </td>
+                <td>989807</td>
+                <td>Luigi's Mansion 2</td>
+                <td>$49.990</td>
+                <td>12</td>
+                <td><button class="btn btn-carrito">Agregar a carrito</button></td>
+            </tr>
+            <tr>
+                <td style="width: auto; text-align: center;">
+                    <img src="{% static 'img/ns_mariodonkey.jpg' %}" alt="mario vs donkey" class="img-fluid img-ps4">
+                </td>
+                <td>989808</td>
+                <td>Mario vs Donkey Kong</td>
+                <td>$49.990</td>
+                <td>3</td>
+                <td><button class="btn btn-carrito">Agregar a carrito</button></td>
+            </tr>
+            <tr>
+                <td style="width: auto; text-align: center;">
+                    <img src="{% static 'img/ns_marioparty.jpg' %}" alt="mario party" class="img-fluid img-ps4">
+                </td>
+                <td>989809</td>
+                <td>Super Mario party</td>
+                <td>$49.990</td>
+                <td>5</td>
+                <td><button class="btn btn-carrito">Agregar a carrito</button></td>
+            </tr>
+            <tr>
+                <td style="width: auto; text-align: center;">
+                    <img src="{% static 'img/ns_supermariorpg.jpg' %}" alt="super mario rpg" class="img-fluid img-ps4">
+                </td>
+                <td>989810</td>
+                <td>Super Mario RPG</td>
+                <td>$49.990</td>
+                <td>6</td>
+                <td><button class="btn btn-carrito">Agregar a carrito</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

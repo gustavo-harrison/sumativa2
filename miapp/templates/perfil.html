@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+   <!----------------------------- PERFIL DEL USUARIO --------------------------------->
+   <div class="container mt-4 mb-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg p-4">
+                <h3 class="text-center custom-tittle">¡Bienvenido!</h3>
+                
+                <div id="perfilInfo" class="mt-4">
+                    <div class="mb-3">
+                        <strong>RUT: </strong><span id="rut"></span>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Nombre: </strong><span id="nombre"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <strong>Apellido Paterno: </strong><span id="apellidoP"></span>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <strong>Apellido Materno: </strong><span id="apellidoM"></span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Dirección: </strong><span id="direccion"></span>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Comuna: </strong><span id="comuna"></span>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Teléfono: </strong><span id="telefono"></span>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Correo Electrónico: </strong><span id="correo"></span>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Región: </strong><span id="region"></span>
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </div> 
+</div>
+
+<script src="JS/funciones.js" defer></script>
+
+
+{% endblock %}
