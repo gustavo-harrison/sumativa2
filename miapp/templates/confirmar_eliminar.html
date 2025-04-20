@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-4 border-primary">
+                <h4 class="text-center custom-tittle mb-7">¿Estás seguro de que deseas eliminar este socio?</h4>
+                
+                <div class="alert alert-warning text-center">
+                    <strong style="color: black;">{{ socio.nombre }} {{ socio.apellidop }} {{ socio.apellidom }}</strong><br>
+                    <span class="text-muted">RUT: {{ socio.rut }}</span>
+                </div>
+
+                <form method="post" class="text-center">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger me-2">Confirmar Eliminación</button>
+                    <a href="{% url 'listar_socios' %}" class="btn btn-secondary">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

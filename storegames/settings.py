@@ -56,7 +56,7 @@ ROOT_URLCONF = 'storegames.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'miapp' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,8 +76,10 @@ WSGI_APPLICATION = 'storegames.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'localhost:1521/FREEPDB1',
+        'USER': 'system',
+        'PASSWORD': 'Ora1234',
     }
 }
 
@@ -126,3 +128,25 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# TIEMPO DE LA COOKIE EN SEGUNDOS
+SESSION_COOKIE_AGE = 60 * 60 * 1;
+
+# ELIMINAR SESION AL CERRAR NAVEGADOR
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# GUARDAR SESION SI HA CAMBIADO
+SESSION_SAVE_EVERY_REQUEST = False
+
+# NOMBRE DE LA COOKIE
+SESSION_COOKIE_NAME = 'sessionid'
+
+# SEGURIDAD
+SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_HTTPONLY = True
+
+# RUTA DE LA COOKIE
+SESSION_COOKIE_PATH = '/'
+
+# AQUI DEJAR A DONDE SE REDIRECCIONA LUEGO DE INICIAR SESION
+LOGIN_REDIRECT_URL = 'listar_socios'
