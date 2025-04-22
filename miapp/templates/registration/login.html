@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!---------------------------------------------------- FORMULARIO INICIO DE SESIÓN -------------------------------------------------------------->
+
+<!-- FORMULARIO INICIO DE SESIÓN -->
 <div class="container mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-md-3">
@@ -24,15 +25,21 @@
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-lock"></i></span>
                             {{ form.password }}  
+                        </div>
                     </div>
 
-                    <div class="d-grid">
+                    <div class="d-grid mt-3">    
                         <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                    </div>
+
+                    <div class="text-center mt-3">
+                        <a href="{% url 'password_reset' %}" class="text-decoration-none">
+                            <i class="bi bi-question-circle"></i> ¿Olvidaste tu contraseña?
+                        </a>
                     </div>
                 </form>
             </div>                
         </div>
     </div> 
 </div>
-
 {% endblock %}

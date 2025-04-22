@@ -66,13 +66,26 @@
                 </ul>
             </div>
 
+            <!-- IF Y ELSE PARA INICIAR Y CERRAR SESION -->
             <div class="nav-icons">
-                <a href="{% url 'login' %}" class="nav-link login-icon">
-                    <i class="bi bi-person-circle fs-7"> Login</i>
-                </a>
-                <a href="{% url 'crear_socio' %}" class="nav-link login-icon">
-                    <i class="bi bi-person-plus-fill fs-6"> Regístrate</i>
-                </a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'listar_socios' %}" class="nav-link">
+                        <i class="bi bi-person-circle fs-7"> Usuario</i>
+                    </a>
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="nav-link">
+                            <i class="bi bi-box-arrow-right fs-7"> Cerrar sesión</i>
+                        </button>
+                    </form>
+                {% else %}
+                    <a href="{% url 'login' %}" class="nav-link login-icon">
+                        <i class="bi bi-person-circle fs-7"> Login</i>
+                    </a>
+                    <a href="{% url 'crear_socio' %}" class="nav-link login-icon">
+                        <i class="bi bi-person-plus-fill fs-6"> Regístrate</i>
+                    </a>
+                {% endif %}
                 <a href="#" class="btn contact-btn ms-3">
                     <i class="bi bi-search fs-5"></i>
                 </a>
@@ -80,6 +93,7 @@
                     <i class="bi bi-cart fs-5"></i>
                 </a>
             </div>
+            
         </div>
     </nav>
 
